@@ -17,9 +17,15 @@ a {
     }
 }
 
+.header {
+    background: var(--Body-Primary-Backgorund, #FFF);
+}
+
 .topnav {
     padding: var(--spacing-05-rem, 8px) var(--Spacing-5-rem, 80px);
     overflow: hidden;
+    background-color: antiquewhite;
+
 
     .navbtn {
         display: flex;
@@ -30,11 +36,45 @@ a {
         height: var(--Spacing-3-rem, 48px);
         gap: var(--spacing-05-rem, 8px);
         color: black;
-        background-color: antiquewhite;
 
 
         &:hover {
-            color: green;
+            color: var(--Nav-hover, #00BB29);
+
+            .material-icons {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+                color: var(--Nav-hover, #00BB29)
+            }
+        }
+
+        &:focus {
+            color: var(--Nav-hover, #00BB29);
+
+            .material-icons {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+                color: var(--Nav-hover, #00BB29)
+            }
+        }
+
+        &:active {
+            color: var(--Nav-activ, #007D1B);
+
+            .material-icons {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+                color: var(--Nav-activ, #007D1B);
+            }
+        }
+
+        &:disabled {
+            color: var(--Nav-disabled, #A9E8B7);
+
+            .material-icons {
+                transform: rotate(180deg);
+                color: var(--Nav-disabled, #A9E8B7);
+            }
         }
     }
 }
