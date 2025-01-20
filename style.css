@@ -42,9 +42,12 @@ a {
             color: var(--Nav-hover, #00BB29);
 
             .material-icons {
+                color: var(--Nav-hover, #00BB29)
+            }
+
+            .rt {
                 transform: rotate(180deg);
                 transition: transform 0.3s ease;
-                color: var(--Nav-hover, #00BB29)
             }
         }
 
@@ -52,21 +55,10 @@ a {
             color: var(--Nav-hover, #00BB29);
 
             .material-icons {
-                transform: rotate(180deg);
-                transition: transform 0.3s ease;
                 color: var(--Nav-hover, #00BB29)
             }
         }
 
-        &:active {
-            color: var(--Nav-activ, #007D1B);
-
-            .material-icons {
-                transform: rotate(180deg);
-                transition: transform 0.3s ease;
-                color: var(--Nav-activ, #007D1B);
-            }
-        }
 
         &:disabled {
             color: var(--Nav-disabled, #A9E8B7);
@@ -77,15 +69,18 @@ a {
             }
         }
     }
+
+    .active {
+        color: var(--Nav-activ, #007D1B);
+
+        .material-icons {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+            color: var(--Nav-activ, #007D1B);
+        }
+    }
 }
 
-
-
-
-.active {
-    background-color: red;
-    color: black;
-}
 
 .topnav .icon {
     display: none;
@@ -101,32 +96,30 @@ a {
     .dropbtn {
         display: flex;
     }
+}
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--Body-Nav-Background, #FFF);
+    border-radius: 0px 0px 16px 16px;
+    z-index: 1;
 
-        .navbtn {
-            display: flex;
-            float: none;
-            text-align: center;
-            align-items: center;
-            padding: 0px var(--Spacing-1rem, 16px);
-            height: var(--Spacing-3-rem, 48px);
-            gap: var(--spacing-05-rem, 8px);
-            color: black;
-            text-align: left;
+    .navbtn {
+        display: flex;
+        float: none;
+        text-align: center;
+        align-items: center;
+        padding: 0px var(--Spacing-1rem, 16px);
+        height: var(--Spacing-3-rem, 48px);
+        gap: var(--spacing-05-rem, 8px);
+        color: black;
+        text-align: left;
 
-            &:hover {
-                color: green;
-            }
+        &:hover {
+            color: green;
         }
     }
-
 }
 
 
@@ -169,14 +162,13 @@ a {
 
     .topnav.responsive .icon {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 20px;
+        top: 8px;
     }
 
     .topnav.responsive .navbtn {
         float: none;
-        display: block;
-        text-align: left;
+        display: flex;
     }
 
     .topnav.responsive .dropdown {
@@ -201,4 +193,6 @@ a {
     width: var(--spacing-15-rem, 24px);
     height: var(--spacing-15-rem, 24px);
     color: var(--icon-color-primary, #000000);
+
+
 }
