@@ -1,49 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-logo"><a
-                    href="https://expertprofilaktyka-5s9bd51yw-marcins-projects-df9c058a.vercel.app/">Logo</a>
-            </div>
-            <div class="header-nav-desktop">
-                <button class="btn-desktop">Raz</button>
-                <button class="btn-desktop">Dwa</button>
-                <button class="btn-desktop">Trzy</button>
-            </div>
-            <div class="nav-dropdown-mobile">
-                <button class="dropbtn">Dropdown
-                    <i class="fa fa-caret-down">Ikon</i>
-                </button>
+    <header class="header">
+        <!-- <div class="header-logo">
+            <a href="index.html">
+                <img src="assets/icon/Ekspert-Centrum-Profilaktyki-Uzależnień.png"
+                    alt="EkspertCentrumProfilaktykiUzależnień">
+            </a>
+        </div> -->
+        <div class="topnav" id="myTopnav">
+            <a href="#news" class="header-logo">
+                <img src="assets/icon/Ekspert-Centrum-Profilaktyki-Uzależnień.png"
+                    alt="Ekspert Centrum Profilaktyki Uzależnień"></a>
+            <a class="navbtn" href="kontakt.html">Kontakt</a>
+            <a class="navbtn" href="dzienprofilaktyki.html">Dzień profilaktyki</a>
+            <div class="dropdown">
+                <div class="dropbtn">
+                    <a class="navbtn" href="">Warsztaty i szkolenia<i class="material-icons">keyboard_arrow_down</i></a>
+                </div>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a class="navbtn" id="dropdown-button" href="warsztatydlaucziow.html">Warsztaty dla
+                        uczniów</a>
+                    <a class="navbtn" id="dropdown-button" href="szkoleniadlarodzicow.html">Szkolenia dla
+                        rodziców</a>
+                    <a class="navbtn" id="dropdown-button" href="szkoleniadlakadrypedagogicznej.html">Szkolenia
+                        dla kadry
+                        pedagogicznej</a>
+                    <a class="navbtn" id="dropdown-button" href="rekomendowaneprogramy.html">Rekomendowane
+                        programy</a>
                 </div>
             </div>
-    </header>
-    <section>
-        <div>
-            <h3>Kompletne szkolenia i warsztaty</h3>
-            <p>Nasze warsztaty i szkolenia w sposób całościowy ujmują problemy z jakimi każdego dnia muszą mierzyć się
-                dzieci, młodzież i dorośli. Najważniejszym celem dla nas jest pomóc uczniom radzić sobie z aktualnie
-                dotykającymi ich trudnościami oraz wyposażyć w umiejętności, które pozwolą im w późniejszym życiu
-                poradzić
-                sobie z różnymi zagrożeniami i pokusami.</p>
-        </div>
-        <div>
-            <button>Takie tam</button>
-        </div>
+            <a class="navbtn" href="onas.html">O nas</a>
+            <a class="navbtn active" href="index.html">Strona główna</a>
 
-    </section>
+            <a href="javascript:void(0);" class="material-icons icon" onclick="myFunction()">home</a>
+        </div>
+    </header>
+
+
+    <div style="padding-left:16px">
+        <h2>Responsive Topnav with Dropdown</h2>
+        <p>Resize the browser window to see how it works.</p>
+        <p>Hover over the dropdown button to open the dropdown menu.</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
