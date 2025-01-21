@@ -38,6 +38,7 @@ a {
         color: black;
 
 
+
         &:hover {
             color: var(--Nav-hover, #00BB29);
 
@@ -115,10 +116,6 @@ a {
         gap: var(--spacing-05-rem, 8px);
         color: black;
         text-align: left;
-
-        &:hover {
-            color: green;
-        }
     }
 }
 
@@ -156,6 +153,7 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+
     .topnav.responsive {
         position: relative;
     }
@@ -177,6 +175,10 @@ a {
 
     .topnav.responsive .dropdown-content {
         position: relative;
+
+        #extra {
+            padding: 0px 0px 0px 40px;
+        }
     }
 
     .topnav.responsive .dropdown .dropbtn {
